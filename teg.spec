@@ -36,21 +36,10 @@ different.
 rm -rf $RPM_BUILD_ROOT
 GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std bindir=%{_gamesbindir}
 
-# menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat <<EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): \
- command="%{_gamesbindir}/tegclient" \
- section="More applications/Games/Strategy" \
- title="Tenes Emapandas Graciela" \
- longtitle="Clone of a Risk clone" \
- needs="x11" \
- icon="%{name}.png"
-EOF
-#?package(%{name}): needs="text" section="Amusement/Strategy" title="TEG server" \
-#  longtitle="Clone of a Risk clone (server)" command="%{_gamesbindir}/tegserver" icon="%{name}.png"
+desktop-file-install --vendor="" \
+  --remove-category="Application" \
+  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/gnome/apps/Games/*
 
-# icons
 mkdir -p $RPM_BUILD_ROOT%{_iconsdir} \
 	 $RPM_BUILD_ROOT%{_miconsdir} \
 	 $RPM_BUILD_ROOT%{_liconsdir}
@@ -78,10 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog PEOPLE README* ReleaseNotes.txt TODO
 %{_gamesbindir}/*
 %{_datadir}/pixmaps/*
+%{_datadir}/applications/*.desktop
 %{_datadir}/gnome/apps/Games/*.desktop
 %{_sysconfdir}/gconf/schemas/*.schemas
-
-%{_menudir}/*
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
