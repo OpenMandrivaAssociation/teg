@@ -16,6 +16,7 @@ Provides:	teg-gnome1
 BuildRequires:	GConf2
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	ImageMagick
+BuildRequires:	desktop-file-utils
 Requires(post): GConf2
 Requires(preun): GConf2
 
