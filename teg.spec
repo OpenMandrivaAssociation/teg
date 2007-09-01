@@ -1,14 +1,14 @@
 Summary:	Clone of a Risk clone
 Name:		teg
 Version:	0.11.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 URL:		http://teg.sourceforge.net/
 License:	GPL
 Group:		Games/Strategy
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 Source0:	%{name}-%{version}.tar.bz2
-
+Patch0:		teg-0.11.2-remove-de-comment.patch
 Obsoletes:	teg-gnome1
 # 0.11.0-4mdk (Abel) I don't think providing teg-gnome1 is reasonable,
 # but ... rpmlint
@@ -28,6 +28,7 @@ different.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %configure2_5x --bindir=%{_gamesbindir}
