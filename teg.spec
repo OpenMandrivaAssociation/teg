@@ -5,6 +5,7 @@ Release:	%mkrel 2
 URL:		http://teg.sourceforge.net/
 License:	GPL
 Group:		Games/Strategy
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		teg-0.11.2-remove-de-comment.patch
