@@ -1,0 +1,10 @@
+--- client/gui-gnome/teg.desktop.orig	2007-09-01 09:56:48.000000000 +0800
++++ client/gui-gnome/teg.desktop	2007-09-01 09:56:53.000000000 +0800
+@@ -4,7 +4,6 @@
+ Name[de]=T.E.G. Client
+ Comment=Tenes Empanadas Graciela client
+ Comment[es]=Cliente del Tenes Empanadas Graciela
+-Comment[de]=Client für Tenes Empanadas Graciela
+ Exec=tegclient
+ Icon=teg_icono.png
+ Terminal=0
