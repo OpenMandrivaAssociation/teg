@@ -2,7 +2,7 @@ Summary:	Clone of a Risk clone
 Name:		teg
 Version:	0.11.2
 Release:	%mkrel 7
-URL:		http://teg.sourceforge.net/
+URL:		https://teg.sourceforge.net/
 License:	GPL
 Group:		Games/Strategy
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
