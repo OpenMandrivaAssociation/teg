@@ -13,6 +13,11 @@ Obsoletes:	teg-gnome1
 # 0.11.0-4mdk (Abel) I don't think providing teg-gnome1 is reasonable,
 # but ... rpmlint
 Provides:	teg-gnome1
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	GConf2
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	imagemagick
